@@ -6,8 +6,24 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --page-width: 1000px;
+  --size-small: 12px;
+  --size-medium: 16px;
 }
 
+/* body {
+  background: url('/public/grain.png');
+  background-size: 250px;
+  background-repeat: repeat-x repeat-y;
+} */
+
+.pageLanding {
+  max-width: var(--page-width);
+  width: 100%;
+  padding: var(--size-small) var(--size-medium);
+  margin: 0 auto;
+}
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -30,4 +46,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

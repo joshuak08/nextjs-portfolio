@@ -1,3 +1,3 @@
 export default function Footer(){
-    return (<></>)
+    return (<footer className="mt-12 pageLanding">footer goes here asdf </footer>)
 }
