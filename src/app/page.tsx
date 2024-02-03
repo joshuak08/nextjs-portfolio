@@ -3,7 +3,7 @@ export default function Home() {
     return (
         <>
             {/* typewriter animation here for all fields */}
-            <h1>Hey there! I'm Joshua Kong. </h1>
+            <h1>Hey there! I&#39;m Joshua Kong. </h1>
             {/* include pic here maybe */}
             <p>Previously at TD Securities London, UK
             </p>
