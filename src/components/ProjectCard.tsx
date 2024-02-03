@@ -9,39 +9,36 @@ import Techicons from "@/components/Techicons";
 export function ProjectCard(props: ProjectCardProps) : React.ReactNode {
     return (
         // add redirection links
-        <div className="rounded border-gray-300 overflow-hidden justify-between grid grid-cols-12">
+        // <div className="grid grid-cols-12 dark:backdrop-filter dark:backdrop-blur-lg dark:drop-shadow-lg bg-slate-800/50 rounded justify-between ">
+        <div className="group relative pb-1 transition-all gap-4">
 
-            {/* <div class="rounded bg-white border-gray-200 shadow-md overflow-hidden"> 
-                <img src="img/stew.jpg" alt="stew" class="h-32 sm:h-48 w-full object-cover">
-                    <div class="m-4">
-                        <span class="font-bold">5 Bean Chili Stew</span>
-                        <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+            <div className="p-4 z-0 rounded-md transition motion-reduce:transition-none grid grid-cols-12 text-slate-300
+             group-hover:bg-slate-800/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg">
+                {/* title, description, text parts */}
+                <div className='col-span-7'>
+                    <h1 className="font-semibold text-xl text-slate-50">{props.title}</h1>
+                    <h4 className="text-sm">{props.year}</h4>
+                    {/* div for tech icons */}
+                    <div className='flex py-1 items-center'>
+                        <span className="text-md">Built with: </span>
+                        {props.technologies.map((tech, index) => (
+                            <Techicons tech={tech} key={index}/>
+                            // <Image src={`/images/techicons/${tech}.svg`} alt={tech} width={50} height={50}/>
+                            ))}
+                    </div>
+                    <p className="">This is a test to see how long the description block can go with this lorem ipsum lorem ipsum lorem ipsum lorem ipsum  </p>
                 </div>
-            </div> */}
-            {/* title, description, text parts */}
-            <div className='col-span-7 my-4'>
-                <h1 className="font-semibold text-xl">{props.title}</h1>
-                <h4 className="text-sm">{props.year}</h4>
-                {/* div for tech icons */}
-                <div className='flex py-1 items-center'>
-                    <span className="text-md">Built with: </span>
-                    {props.technologies.map((tech, index) => (
-                        <Techicons tech={tech} key={index}/>
-                        // <Image src={`/images/techicons/${tech}.svg`} alt={tech} width={50} height={50}/>
-                        ))}
-                </div>
-                <p className="">This is a test to see how long the description block can go with this lorem ipsum lorem ipsum lorem ipsum lorem ipsum  </p>
-            </div>
 
-            {/* image part */}
-            <div className="col-span-5 rounded overflow-hidden m-3">
-                {/* <Image className="" src={props.image}/> */}
-                <Image className="" alt='python-logo' src={'/images/python.png'}
-                // fill
-                object-fit='contain' 
-                width={50}
-                height={50}
-                />
+                {/* image part */}
+                <div className="col-span-5 rounded overflow-hidden m-3">
+                    {/* <Image className="" src={props.image}/> */}
+                    <Image className="" alt='python-logo' src={'/images/python.png'}
+                    // fill
+                    object-fit='contain' 
+                    width={50}
+                    height={50}
+                    />
+                </div>
             </div>
         </div>
     )

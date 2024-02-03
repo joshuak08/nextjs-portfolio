@@ -17,7 +17,7 @@ export default function ThemeSwitcher() {
       <button
       aria-label='Toggle Dark Mode'
       type='button'
-      className='flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-700'
+      className='flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-900'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         {theme === 'dark' ? (

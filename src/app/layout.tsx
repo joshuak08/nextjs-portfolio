@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" style={{colorScheme: 'light'}}>
-      <body className={`${inter.className} bg-zinc-50 dark:bg-black h-screen`}>
+      <body className={`${inter.className} bg-zinc-100 dark:bg-dark-blue h-screen`}>
         <Providers>
           {/* <Background /> */}
           <NavBar />

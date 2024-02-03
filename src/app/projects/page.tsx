@@ -8,6 +8,7 @@ export default function Project(){
         description: "test",
         image: "test",
         link: "www.google.com",
+        category: ['personal', 'internship', 'university'],
         technologies: ["test", "test", "test"],
     }
 
@@ -15,8 +16,20 @@ export default function Project(){
     return (
         <>
             <h1 className="mb-5 font-semibold text-2xl">Projects</h1>
-            {/* add filter here for internship personal project coursework */}
-            <ProjectCard title={test.title} year={test.year} description={test.description} image={test.image} link={test.link} technologies={test.technologies}/>
+            {/* replace line with filter here for internship personal project coursework */}
+            <hr className="mb-5"
+                style={{
+                background: "#ffffff",
+                height: "5px",
+                border: "none",
+                }}
+            />
+            <ol>
+                {/* add loop here for all  */}
+                <li className="mb-8">
+                    <ProjectCard title={test.title} year={test.year} description={test.description} image={test.image} category={test.category} link={test.link} technologies={test.technologies}/>
+                </li>
+            </ol>
         </>
     )
 }
