@@ -4,7 +4,7 @@ export type ProjectCardProps = {
     description: string;
     image: string;
     link: string;
-    category: string[];
+    category: string;
     technologies: string[];
     highlights?: string[];
 }

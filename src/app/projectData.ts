@@ -1,4 +1,33 @@
-// import { ProjectCardProps } from "./types";
+import { ProjectCardProps } from "./types";
+
+export const projectDataTest: ProjectCardProps[] = [
+    {
+        title: "test",
+        year: 2022,
+        description: "test",
+        image: "python.png",
+        link: "www.google.com",
+        category: 'personal',
+        technologies: ["test", "test", "test"],
+    }, {
+        title: "test1",
+        year: 2023,
+        description: "test1",
+        image: "python.png",
+        link: "www.google.com",
+        category: 'internship',
+        technologies: ["test1", "test1", "test1"],
+    },
+    {
+        title: "test2",
+        year: 2023,
+        description: "test1",
+        image: "python.png",
+        link: "www.google.com",
+        category: 'university',
+        technologies: ["test1", "test1", "test1"],
+    }
+]
 
 // export const projectData: ProjectCardProps[] = [
 //     {
