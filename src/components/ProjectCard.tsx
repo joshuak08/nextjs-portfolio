@@ -7,33 +7,6 @@ import Techicons from "@/components/Techicons";
 import { Link } from "@nextui-org/react";
 import { projectDataTest } from "@/app/projectData"
 
-function filterData(category: string, keyword: string) {
-    return category === keyword
-}
-
-// const [data, setData] = useState<ProjectCardProps[]>(projectDataTest)
-//     const [categories, setCategories] = useState<string[]>([])
-//     const [filteredData, setFilteredData] = useState<ProjectCardProps[]>([])
-
-//     useEffect(() => {
-//         if (categories.length > 0) {
-//             const newData = data.filter(element => categories.includes(element.category))
-//             setFilteredData(newData)
-//         } else {
-//             setFilteredData(data)
-//         }
-//     }, [categories, data])
-
-//     return (
-//         // Use filteredData instead of data in your render
-//         <ol className="group/list">
-//             {filteredData.map((individual) => (
-//                 <li key={individual.title} className="mb-4">
-//                 // ...
-//             ))}
-//         </ol>
-//     )
-
 export default function ProjectCards() : React.ReactNode {
     const [data, setData] = useState<ProjectCardProps[]>(projectDataTest)
     const [categories, setCategories] = useState<string>('')
