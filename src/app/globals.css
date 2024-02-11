@@ -23,6 +23,11 @@
   padding: var(--size-small) var(--size-medium);
   margin: 0 auto;
 }
+
+.filter-button {
+  @apply hover:bg-blue-500 hover:text-white first:ml-0 mx-1 text-blue-700 font-semibold  py-2 px-4 border border-blue-500 hover:border-transparent rounded;
+}
+
 /*
 @media (prefers-color-scheme: dark) {
   :root {

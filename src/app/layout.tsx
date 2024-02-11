@@ -21,9 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" style={{colorScheme: 'light'}}>
-      <body className={`${inter.className} bg-zinc-100 dark:bg-dark-blue h-screen`}>
+      <body className={`${inter.className} bg-zinc-100 dark:bg-dark-blue h-full min-h-screen`}>
         <Providers>
-          {/* <Background /> */}
           <NavBar />
             <div className="pageLanding">
               {children} 
