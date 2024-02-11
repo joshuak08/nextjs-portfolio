@@ -9,7 +9,6 @@ export default function NavBar() {
   const Links = [
     {name: "About", link: "/about"}, 
     {name: "Projects", link: "/projects"}, 
-	{name: "Resume", link: "/resume"}
   ]
 
   const menuItems = {
@@ -33,6 +32,7 @@ export default function NavBar() {
 							<Link href={link.link}>{link.name}</Link>
 						</li>
 					))}
+					<li className="flex items-center justify-center uppercase"><Link href='/Joshua Kong SWE CV - Jan 2024.pdf' target='_blank'>Resume</Link></li>
 					<ThemeSwitcher />
 				</ul>
 			</div>

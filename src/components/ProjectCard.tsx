@@ -33,7 +33,7 @@ export default function ProjectCards() : React.ReactNode {
 
     return (
         <>
-            <FilterButton onFilter={handleFilter} />
+            <FilterButtons onFilter={handleFilter} />
             <ol className="group/list">
                 {filteredData.map((individual) => (
                     <li key={individual.title} className="mb-4">
@@ -49,18 +49,26 @@ interface FilterButtonProps {
     onFilter: (filterType: string) => void;
 }
 
-function FilterButton({ onFilter }: FilterButtonProps): React.ReactNode {
+function FilterButtons({ onFilter }: FilterButtonProps): React.ReactNode {
+    const [activeIndex, setActiveIndex] = useState(0)
+    const filterTypes = [
+        {text: 'All', keyword: ''},
+        {text: 'Personal', keyword: 'personal'},
+        {text: 'Internship', keyword: 'internship'},
+        {text: 'University', keyword: 'university'}
+    ]
+
+    const handleClick = (filterType: string, index: number) => {
+        onFilter(filterType)
+        setActiveIndex(index)
+    }
+
     return (
         <>
             <div className='flex'>
-                <button className='hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
-                onClick={() => onFilter('personal')}>Personal</button>
-                <button className='hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
-                onClick={() => onFilter('internship')}>Internship</button>
-                <button className='hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
-                onClick={() => onFilter('university')}>University</button>
-                <button className='hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
-                onClick={() => onFilter('')}>All</button>
+                {filterTypes.map((filter, index) => (
+                    <button className={`filter-button ${index === activeIndex ? "!bg-blue-500 !text-white" :""}`} key={index} onClick={() => handleClick(filter.keyword, index)}>{filter.text}</button>
+                ))}
             </div>
         </>
     )

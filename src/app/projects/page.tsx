@@ -1,8 +1,6 @@
 import ProjectCards from "@/components/ProjectCard";
 
 export default function Project(){
-    
-
 
     return (
         <>
