@@ -29,10 +29,10 @@ export default function NavBar() {
 				<ul className='flex gap-4'>
 					{Links.map((link) => (
 						<li key={link.name} className="flex items-center justify-center uppercase">
-							<Link href={link.link}>{link.name}</Link>
+							<Link className="nav-items" href={link.link}>{link.name}</Link>
 						</li>
 					))}
-					<li className="flex items-center justify-center uppercase"><Link href='/Joshua Kong SWE CV - Jan 2024.pdf' target='_blank'>Resume</Link></li>
+					<li className="flex items-center justify-center uppercase"><Link className="nav-items" href='/Joshua Kong SWE CV - Jan 2024.pdf' target='_blank'>Resume</Link></li>
 					<ThemeSwitcher />
 				</ul>
 			</div>
