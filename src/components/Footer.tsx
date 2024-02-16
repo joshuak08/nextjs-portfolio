@@ -1,19 +1,24 @@
+import Image from 'next/image'
+import { FooterIcons } from './FooterIcons'
+
 export default function Footer(){
     return (
         // add logos and made by statements
-        <footer className="mt-12 pageLanding flex">
+        <footer className="mt-12 pageLanding space-y-1">
             <p>
-                Let&#39;s get in touch! Connect with me on&nbsp;
-                <span>
-                    <a className="underline decoration-gray-600 hover:decoration-gray-200 transition-all ease-in-out" target="_blank" href="https://www.linkedin.com/in/joshua-kong-xw">LinkedIn</a> ↗
-                </span>
-                &nbsp;or&nbsp;
+                Let&#39;s get in touch! Send me an email at&nbsp;
                 <span>
                     <a className="underline decoration-gray-600 hover:decoration-gray-200 transition-all ease-in-out" target="_blank" href="mailto:joshuaxwkong@gmail.com">joshuaxwkong@gmail.com</a> 
                 </span>
                 .
             </p>
-
+            <p>
+                Made by Joshua Kong
+            </p>
+            <div className="flex gap-4">
+                <FooterIcons src={"/github.svg"} link={"test.com"} />
+                <FooterIcons src={"/linkedin.svg"} link={"test.com"} />
+            </div>
         </footer>
     )
 }
