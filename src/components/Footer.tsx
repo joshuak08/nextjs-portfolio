@@ -16,8 +16,8 @@ export default function Footer(){
                 Made by Joshua Kong
             </p>
             <div className="flex gap-4">
-                <FooterIcons src={"/github.svg"} link={"test.com"} />
-                <FooterIcons src={"/linkedin.svg"} link={"test.com"} />
+                <FooterIcons src={"/github.svg"} link={"https://github.com/joshuak08"} />
+                <FooterIcons src={"/linkedin.svg"} link={"https://www.linkedin.com/in/joshua-kong-xw"} />
             </div>
         </footer>
     )
